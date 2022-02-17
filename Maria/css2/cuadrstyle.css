@@ -1,0 +1,325 @@
+body {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+  
+  }
+  
+  h1 {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.7vw;
+    display: flex;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nave {
+    background-color: rgb(218, 218, 218);
+    overflow: hidden;
+    grid-column: 1/4;
+  }
+  
+  
+  .nave a {
+    float: none;
+    display: inline-block;
+    color: #080808;
+    align-items : center;
+    padding: 14px 16px;
+    text-decoration: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  
+  .nave a.activo {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  .nave .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nave a:not(:first-child) {
+      display: none;
+    }
+    .nave a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nave.responsive {
+      position: relative;
+    }
+    .nave.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nave.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  nav, aside, form {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  nav{
+      font-weight: bold;
+  }
+  
+  img.mySlides{
+      width: 100%;
+      max-height: 600px;
+      margin:auto;
+  
+  }  
+  
+  
+  .artista{
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    padding-block-end: 10%;
+     
+  }
+  
+  .artista img{
+    margin: -2rem 2rem 2rem 2rem;
+    border-radius: 50%;
+    width: 15rem;
+    max-width: 30%;
+    opacity: 85%;
+    float: left;
+  }
+  
+  
+  footer{
+      position: relative;
+      height: fit-content;
+      text-align: center;
+      background: rgb(226, 226, 226);
+      font-size: 1.2vw;
+      bottom: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      
+  }
+  
+  footer i{
+    margin-top: 1rem;
+    justify-items: center;
+    min-width: 2rem
+  }
+  
+  a:link {
+    color: black;
+    text-decoration: none;
+  }
+  
+   
+  a:visited {
+    color: black;
+    text-decoration: none;
+  } 
+ 
+  a:hover {
+    color: rgb(156, 152, 154);
+    text-decoration: none;
+  }
+  
+
+  a:active {
+    color: rgb(235, 164, 199);
+    text-decoration: none;
+  }
+
+
+/* FORMULARIO */
+
+.entrada{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  border:1px solid #e0e0e0;
+  padding:10px;
+}
+
+.enviar{
+  border: 0;
+  box-shadow: rgb(235, 232, 221);
+  margin-top: 15px;
+  padding:10px;
+  width: 100%;
+  background-color: rgb(255, 212, 121);
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+legend{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 3px;
+  text-size-adjust: auto;
+}
+
+.formulario{
+  width: fit-content;
+  margin:auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 2rem 3rem 3rem 3rem;
+  display: flex;
+  justify-items: center;
+  background-color: rgb(241, 240, 241);
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgb(245, 214, 243);
+  }
+
+  .formulario #ErrorM{
+    margin-bottom: 20px;
+    padding: 0px;
+    background: rgb(248, 193, 12);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+  }
+
+  /* ACUADROS*/
+
+  .PaginaN{
+    padding-top: 2rem;
+    text-size-adjust: auto;
+  }
+
+  .galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    padding: 20px;
+    grid-gap:10px;
+  }
+
+  .item_galeria{
+    position:relative;
+    animation-name: fade-in-top;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+  @keyframes fade-in-top {
+    0%{
+      -webkit-transform: translateY(-50px);
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    }
+  }
+  
+
+  .obras{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item_galeria:nth-child(1){
+    grid-column-start: span 2;
+  }
+
+  .item_galeria:nth-child(4){
+    grid-row-start: span 2;
+  }
+
+  .item_galeria:nth-child(8){
+    grid-column-start: span 2;
+  }
+
+  
+  .obrasTexto{
+    position:absolute;
+    bottom:0;
+    color:white;
+    background: rgb(0,0,0,0.5);
+    width: 100%;
+    margin: 0;
+    padding:10px;
+    font-size: 3vw;
+  }
+
+  @media (min-width:1024px) {
+    .galeria{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+
+  
+
+  @media (max-width: 480px) {
+    .galeria{
+      grid-template-columns: repeat(2,1fr);    
+    }
+    .item_galeria:nth-child(9){
+      grid-row: 3;
+    }
+    .obrasTexto{
+      font-size: 4vw;
+    }
+  }
+
+  /* BIO */
+
+.bio{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  padding: 5%;
+  background-image: url("Artista.jpg") ;
+}
+
+.bio p{
+  grid-column: span 3;
+  background: rgb(255,255,255,0.7);
+  padding: 2rem;
+  text-size-adjust: auto;
+  text-align: justify;
+}
+.mas{
+  font-weight: bold;
+}
